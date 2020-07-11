@@ -5,7 +5,7 @@ phases:
     runtime-versions:
       python: 3.7
     commands:
-      - pip3 install -r requirement.txt
+      - pip3 install -r requirements.txt
       - pip3 install pytest
       - pip3 install flake8
   pre_build:
