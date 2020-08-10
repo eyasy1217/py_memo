@@ -30,5 +30,5 @@ steps:
   displayName: 'flake8'
 
 - script: |
-    pytest -v -s -cov=.
+    pytest -v -s --cov=.
   displayName: 'pytest'
