@@ -4,7 +4,10 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
 
 trigger:
-- azure-pipelines
+- DUMMY_BRANCH_TO_BUILD_ONLY_ON_PR
+
+pr:
+- master
 
 pool:
   vmImage: 'ubuntu-latest'
