@@ -22,7 +22,7 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
-    pip install pytest==5.4.3 pytest-mock==3.2.0 flake8==3.8.3 pytest-azurepipelines
+    pip install pytest==5.4.3 pytest-mock==3.2.0 pytest-cov==2.10.0 flake8==3.8.3 pytest-azurepipelines
   displayName: 'Install dependencies'
 
 - script: |
@@ -30,5 +30,5 @@ steps:
   displayName: 'flake8'
 
 - script: |
-    pytest -v -s
+    pytest -v -s -cov=.
   displayName: 'pytest'
