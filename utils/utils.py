@@ -15,4 +15,3 @@ def _print_hello():
 
 def pytest_donot_call_method():
     _print_hello()
-
