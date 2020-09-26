@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "disable_existing_loggers": false,
+    "formatters": {
+        "format": {
+            "format": "%(asctime)s:%(levelname)s:%(module)s:%(name)s:%(funcName)s:%(message)s:%(process)d"
+        }
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "formatter": "format"
+        },
+        "file": {
+            "class": "logging.handlers.TimedRotatingFileHandler",
+            "formatter": "format",
+            "filename": "py.log",
+            "backupCount": 7,
+            "interval": 1,
+            "when": "midnight"
+        }
+    },
+    "root": {
+        "level": "DEBUG",
+        "handlers": ["console"]
+    }
+}
