@@ -18,15 +18,16 @@ async def exec_async_sample_01(delay):
 
 
 async def exec_async_sample_02():
+    '''
+    #  usage
+    asyncio.run(exec_async_sample_02())
+    '''
+
     await asyncio.gather(
         exec_async_sample_01(1),
         exec_async_sample_01(2),
         exec_async_sample_01(3)
     )
-
-
-if '__main__' == __name__:
-    asyncio.run(exec_async_sample_02())
 
 
 def _print_hello():
